@@ -1,0 +1,108 @@
+.league-heading {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.league-choice {
+  padding: 0.6rem 1rem;
+  background-color: red;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.tab-container {
+  background-color: red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tab-item.current {
+  background-color: #fff;
+  color: red;
+  padding: 0.7rem 15rem 0.7rem 1rem;
+}
+
+.tab-item {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+}
+.table {
+  width: 100%;
+}
+.thead {
+  background-color: #ffdbdb;
+}
+.thead .headers-item {
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  font-weight: normal;
+  text-align: left;
+}
+th,
+.headers-item,
+.stat-item {
+  border: 1px solid #000;
+}
+.tbody {
+  background-color: #fff;
+  color: #000;
+}
+.stat-item {
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+@media screen and (max-width: 860px) {
+  .headers-item.rmv-2,
+  .stat-item.rmv-2 {
+    display: none !important;
+  }
+  .tab-container .tab-item.current {
+    padding-right: 15rem !important;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .headers-item.rmv-1,
+  .stat-item.rmv-1 {
+    display: none;
+  }
+  .tab-container .tab-item.current {
+    padding-right: 20rem !important;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .tab-container .tab-item.current {
+    padding-right: 7rem !important;
+  }
+  .tab-container .tab-item {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .tab-container .tab-item.current {
+    padding-right: 4rem !important;
+  }
+  .stat-item,
+  .headers-item {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tab-container .tab-item.current {
+    padding-right: 3rem !important;
+  }
+}

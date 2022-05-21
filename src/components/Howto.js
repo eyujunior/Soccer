@@ -1,9 +1,11 @@
 import React from "react";
-
+import "./Howto.css";
 const Howto = () => {
   return (
-    <section id="howto" className="howto">
-      <h2 className="heading-secondary">How to use this app?</h2>
+    <section id="howto" className="howto mt-12">
+      <h2 className="text-center text-3xl capitalize mb-12">
+        How to use this app?
+      </h2>
       <div className="howto-container">
         <div className="howto-item">
           <span className="step-num">1</span>

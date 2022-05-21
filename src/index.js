@@ -4,9 +4,4 @@ import App from "./App";
 import "./index.css";
 
 const rootElement = document.getElementById("root");
-render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  rootElement
-);
+render(<App />, rootElement);

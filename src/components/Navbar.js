@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between bg-transparent absolute top-0 z-20 w-full px-12 py-6 text-white">
-      <Link
-        to="/BigLeagues"
-        className="text-2xl uppercase font-semibold tracking-normal"
-      >
+      <Link to="/" className="text-2xl uppercase font-semibold tracking-normal">
         Bigleagues
       </Link>
       <nav className="">
