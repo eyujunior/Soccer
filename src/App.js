@@ -68,7 +68,9 @@ function App() {
     fetchStanding()
     fetchScorers()
     fetchMatches()
-  }, [selectedLeague])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedLeague, selectedCategory])
 
   return (
     <BrowserRouter>
