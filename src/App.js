@@ -65,6 +65,11 @@ function App() {
 
   useEffect(() => {
     setDate()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    setDate()
     fetchStanding()
     fetchScorers()
     fetchMatches()
