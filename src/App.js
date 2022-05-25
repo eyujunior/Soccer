@@ -29,9 +29,9 @@ function App() {
   const [selectedLeague, setSelectedLeague] = useState(1980)
   const [selectedCategory, setSelectedCategory] = useState('standing')
 
-  const standingApi = `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=97411aa0-c330-11eb-aae1-e138b8cb4f06&season_id=${selectedLeague}`
-  const scorerApi = `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=97411aa0-c330-11eb-aae1-e138b8cb4f06&season_id=${selectedLeague}`
-  const matchesApi = `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=97411aa0-c330-11eb-aae1-e138b8cb4f06&season_id=${selectedLeague}&date_from=${fromDate}&date_to=${untilDate}`
+  const standingApi = `https://app.sportdataapi.com/api/v1/soccer/standings?apikey=68db8940-dbfe-11ec-85ef-1b2c26ccf930&season_id=${selectedLeague}`
+  const scorerApi = `https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=68db8940-dbfe-11ec-85ef-1b2c26ccf930&season_id=${selectedLeague}`
+  const matchesApi = `https://app.sportdataapi.com/api/v1/soccer/matches?apikey=68db8940-dbfe-11ec-85ef-1b2c26ccf930&season_id=${selectedLeague}&date_from=${fromDate}&date_to=${untilDate}`
 
   const leagueChanged = (newLeague) => {
     setSelectedLeague(newLeague)
@@ -65,14 +65,17 @@ function App() {
 
   useEffect(() => {
     setDate()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     setDate()
-    fetchStanding()
-    fetchScorers()
-    fetchMatches()
+    if (selectedCategory === 'standing') {
+      fetchStanding()
+    } else if (selectedCategory === 'scorers') {
+      fetchScorers()
+    } else {
+      fetchMatches()
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedLeague, selectedCategory])
