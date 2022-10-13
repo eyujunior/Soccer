@@ -2,8 +2,8 @@ import React from "react";
 import "./Howto.css";
 const Howto = () => {
   return (
-    <section id="howto" className="howto mt-12">
-      <h2 className="text-center text-3xl capitalize mb-12">
+    <section id="howto" className="howto mt-6 md:mt-24 layout">
+      <h2 className="text-center text-3xl capitalize mb-16 font-semibold">
         How to use this app?
       </h2>
       <div className="howto-container">
